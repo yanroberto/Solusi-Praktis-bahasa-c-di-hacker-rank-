@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    // Complete this function 
+    //solution I
+    int tempa=*a; int tempb=*b;
+    *a=tempa+tempb;
+    *b=abs(tempa-tempb);
+
+    /*-----Solusi II 
+    *a = *a+*b;
+    *b = abs(*a-(2**b)); 
+    
+    casenya :
+    *a = 5+4    = 9
+    *b = 9-2*(4)= 1
+    */
+ }
+ 
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
+
